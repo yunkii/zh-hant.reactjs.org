@@ -1,18 +1,18 @@
 ---
 id: typechecking-with-proptypes
-title: Typechecking With PropTypes
+title: 使用 PropTypes 做類型檢查
 permalink: docs/typechecking-with-proptypes.html
 redirect_from:
   - "docs/react-api.html#typechecking-with-proptypes"
 ---
 
-> Note:
+> 注意：
 >
-> `React.PropTypes` has moved into a different package since React v15.5. Please use [the `prop-types` library instead](https://www.npmjs.com/package/prop-types).
+> `React.PropTypes` 從 React v15.5 版本起已經移往另一個套件。請使用 [`prop-types` 函式庫](https://www.npmjs.com/package/prop-types).
 >
->We provide [a codemod script](/blog/2017/04/07/react-v15.5.0.html#migrating-from-reactproptypes) to automate the conversion.
+>我們提供 [一個 codemod 腳本](/blog/2017/04/07/react-v15.5.0.html#migrating-from-reactproptypes) 來自動轉換。
 
-As your app grows, you can catch a lot of bugs with typechecking. For some applications, you can use JavaScript extensions like [Flow](https://flow.org/) or [TypeScript](https://www.typescriptlang.org/) to typecheck your whole application. But even if you don't use those, React has some built-in typechecking abilities. To run typechecking on the props for a component, you can assign the special `propTypes` property:
+隨著你的應用程式逐漸龐大，你可以用類型檢查排除很多的錯誤。在一些應用程式中，你可以使用 JavaScript 套件像是 [Flow](https://flow.org/) 或是 [TypeScript](https://www.typescriptlang.org/) 將整個程式做類型檢查。但即使你不使用這些方式， React 依然有一些內建的類型檢查能力。想要在一個 component 的 props 執行類型檢查，你可以使用這個 `propTypes` 特殊屬性：
 
 ```javascript
 import PropTypes from 'prop-types';
@@ -30,7 +30,7 @@ Greeting.propTypes = {
 };
 ```
 
-`PropTypes` exports a range of validators that can be used to make sure the data you receive is valid. In this example, we're using `PropTypes.string`. When an invalid value is provided for a prop, a warning will be shown in the JavaScript console. For performance reasons, `propTypes` is only checked in development mode.
+`PropTypes` 產出一系列的驗證來確保你收到的數據是有效的。在這個範例中，我們使用 `PropTypes.string`。當一個prop的值是無效的時候，在 JavaScript console 中會出現警告。出於效能的原因， `propTypes` 僅供在開發模式下檢查。
 
 ### PropTypes {#proptypes}
 
